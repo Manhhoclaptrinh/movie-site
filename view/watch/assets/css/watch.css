@@ -1,0 +1,248 @@
+/* ======================================================
+   GLOBAL BACKGROUND
+====================================================== */
+html, body {
+    margin:0;
+    min-height:100%;
+    background: radial-gradient(
+        circle at top center,
+        #1b1f2a 0%,
+        #0b0d13 45%,
+        #05070a 100%
+    );
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ======================================================
+   WATCH CONTAINER
+====================================================== */
+.watch-container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+/* ======================================================
+   PLAYER
+====================================================== */
+.player-wrapper{
+    background:linear-gradient(
+        180deg,
+        rgba(25,25,35,.95),
+        rgba(5,7,10,.95)
+    );
+    border-radius:18px;
+    box-shadow:0 20px 60px rgba(0,0,0,.8);
+    padding:12px;
+}
+
+.player-frame video{
+    width:100%;
+    border-radius:14px;
+}
+
+/* ======================================================
+   EPISODES
+====================================================== */
+.episodes-section{
+    margin-top:40px;
+    padding:26px;
+    border-radius:18px;
+
+    background:linear-gradient(
+        180deg,
+        rgba(25,25,35,.95),
+        rgba(5,7,10,.95)
+    );
+
+    box-shadow:0 14px 40px rgba(0,0,0,.75);
+}
+
+.episodes-section h3{
+    font-size:20px;
+    margin-bottom:18px;
+}
+
+.episode-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.episode-btn{
+    min-width:52px;
+    height:46px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:999px;
+
+    background:linear-gradient(145deg,#1e1e1e,#121212);
+    border:1px solid #333;
+
+    color:#ffd369;
+    font-size:14px;
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:.25s;
+}
+
+.episode-btn:hover{
+    background:linear-gradient(145deg,#ffd369,#ffb703);
+    color:#000;
+}
+
+.episode-btn.active{
+    background:linear-gradient(145deg,#ffd369,#ffb703);
+    color:#000;
+}
+
+/* ======================================================
+   RELATED MOVIES
+====================================================== */
+
+.related-movies{
+    margin-top:40px;
+    padding:30px;
+    border-radius:18px;
+
+    background:linear-gradient(
+        180deg,
+        rgba(25,25,35,.95),
+        rgba(5,7,10,.95)
+    );
+
+    box-shadow:0 14px 40px rgba(0,0,0,.7);
+}
+
+/* header */
+
+.related-header{
+    margin-bottom:20px;
+}
+
+.related-header h3{
+    font-size:20px;
+    color:#ff4c4c;
+    margin:0;
+}
+
+.related-sub{
+    font-size:13px;
+    color:#aaa;
+    margin-top:4px;
+}
+
+/* GRID */
+
+.related-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+/* CARD */
+
+.related-card{
+    text-decoration:none;
+    display:block;
+}
+
+/* POSTER */
+
+.related-thumb{
+    width:100%;
+    height:240px;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.related-thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.25s;
+}
+
+.related-card:hover img{
+    transform:scale(1.05);
+}
+
+/* TITLE */
+
+.related-title{
+    margin-top:8px;
+    font-size:14px;
+    font-weight:600;
+    color:#eee;
+    text-align:center;
+
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.related-card:hover .related-title{
+    color:#ff4c4c;
+}
+/* ======================================================
+   FOOTER
+====================================================== */
+footer{
+    background:#05070a;
+}
+
+/* ======================================================
+   MOBILE
+====================================================== */
+@media (max-width:900px){
+
+    .related-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:500px){
+
+    .related-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+/* ===== FIX POSTER SIZE ===== */
+
+.related-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    max-width:800px;
+}
+
+.related-grid a{
+    text-decoration:none;
+    color:#fff;
+}
+
+/* poster */
+.related-grid img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/* title */
+.related-grid p{
+    margin-top:6px;
+    font-size:14px;
+    text-align:center;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}

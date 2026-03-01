@@ -1,0 +1,47 @@
+ /* ── Header ── */
+        .header {
+            background: #111;
+            display: flex;
+            align-items: center;
+            padding: 12px 24px;
+        }
+        .logo { font-size: 22px; font-weight: 700; color: #ffac15; }
+        .menu { display: flex; gap: 24px; margin-left: 30px; }
+        .menu a {
+            color: #ffffff !important;
+            text-decoration: none;
+            font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            position: relative;
+        }
+        .menu a::after {
+            content: "";
+            position: absolute;
+            left: 0; bottom: -4px;
+            width: 0; height: 2px;
+            background: #ffd54f;
+            transition: 0.25s;
+        }
+        .menu a:hover::after { width: 100%; }
+
+        /* ── Footer ── */
+        .footer { background: #000; border-top: 1px solid #222; position: relative; }
+        .footer .logo { font-size: 5rem; letter-spacing: 4px; line-height: 1; }
+        .social-icon {
+            width: 48px; height: 48px;
+            transition: all 0.3s;
+        }
+        .social-icon:hover { background: #0056b3 !important; transform: translateY(-4px); }
+        .footer-links a { color: #0d6efd !important; font-weight: 500; font-size: 1.05rem; }
+        .footer-links a:hover { text-decoration: underline; }
+        .badge-hoangsa {
+            background: #dc3545;
+            color: white;
+            font-size: 1.1rem;
+            padding: 10px 24px;
+            box-shadow: 0 3px 10px rgba(220,53,69,.5);
+            right: 20px; top: 20px;
+            z-index: 10;
+        }
+        .opacity-75 { opacity: .75; }
